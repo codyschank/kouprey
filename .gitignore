@@ -1,2 +1,4 @@
 imagery/
 spatial_data/
+.DS_Store
+.Rhistory
