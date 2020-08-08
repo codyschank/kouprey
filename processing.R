@@ -30,3 +30,6 @@ png("evergreen.png", width=5, height=5, units="in", res=300)
 plot(evergreen)
 plot(countries_crop, add=TRUE)
 dev.off()
+
+writeRaster(dry_deciduous, file='imagery/dry_deciduous.tif', overwrite=TRUE)
+writeRaster(evergreen, file='imagery/evergreen.tif', overwrite=TRUE)
