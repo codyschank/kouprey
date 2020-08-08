@@ -17,3 +17,16 @@ countries_crop = readOGR('spatial_data/gadm36_0_cropped.shp')
 
 plot(TCC_2017_crop)
 plot(countries_crop, add=TRUE)
+
+evergreen = TCC_2017_crop > 80
+dry_deciduous = TCC_2017_crop <= 80 & TCC_2017_crop > 20
+
+png("dry_deciduous.png", width=5, height=5, units="in", res=300) 
+plot(dry_deciduous)
+plot(countries_crop, add=TRUE)
+dev.off()
+
+png("evergreen.png", width=5, height=5, units="in", res=300) 
+plot(evergreen)
+plot(countries_crop, add=TRUE)
+dev.off()
